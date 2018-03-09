@@ -4,8 +4,7 @@ let server = http.createServer(function (request, response){
 	//request	请求		接收-输入
 	//response	响应		发送-输出
 	
-	switch(request.url)
-	{
+	switch (request.url) {
 		case '/1.html':
 			response.write('abc');
 			break;
@@ -19,4 +18,4 @@ let server = http.createServer(function (request, response){
 	//response.end()		结束
 });
 
-server.listen(80);
+server.listen(8080);
