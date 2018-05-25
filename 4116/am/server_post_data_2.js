@@ -1,5 +1,3 @@
-   
-
 var http=require('http');
 var querystring=require('querystring');
 
@@ -22,11 +20,4 @@ http.createServer(function (req, res){
 	});
 	
 	res.end('aaaa');
-}).listen(80);
-
-
-
-
-
-
-
+}).listen(8080);

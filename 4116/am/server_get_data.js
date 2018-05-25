@@ -1,5 +1,3 @@
-   
-
 var http=require('http');
 var fs=require('fs');
 
@@ -12,11 +10,4 @@ http.createServer(function (req, res){
 	*/
 	
 	res.end('aaaa');
-}).listen(80);
-
-
-
-
-
-
-
+}).listen(8080);
