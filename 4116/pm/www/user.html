@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="   -   .com" />
+<meta name="copyright" content="   -   .com" />
+<title>   - www.  .com</title>
+<style>
+#div1 {display:block;}
+#div2 {display:none;}
+</style>
+<script src="ajax.js"></script>
+<script>
+function getCookie(name)
+{
+	var arr=document.cookie.split('; ');
+	
+	for(var i=0;i<arr.length;i++)
+	{
+		var arr2=arr[i].split('=');
+		
+		if(arr2[0]==name)
+		{
+			return arr2[1];
+		}
+	}
+	
+	return '';
+}
+
+window.onload=function ()
+{
+	var oUser=document.getElementById('user');
+	var oPass=document.getElementById('pass');
+	var oBtn=document.getElementById('btn1');
+	
+	oBtn.onclick=function ()
+	{
+		var url='user_login?user='+encodeURIComponent(oUser.value)+'&pass='+encodeURIComponent(oPass.value);
+		
+		//alert(url);
+		ajax(url, function (str){
+			var json=eval('('+str+')');
+			
+			if(json.err)
+				alert('登录失败'+json.msg);
+			else
+			{
+				alert('登录成功');
+				document.getElementById('div1').style.display='none';
+				document.getElementById('div2').style.display='block';
+				
+				document.getElementById('user_name').innerHTML=oUser.value;
+			}
+		}, function (){
+			alert('失败');
+		});
+	};
+	
+	//onload——cookie找user
+	var token=getCookie('token');
+	if(token)
+	{
+		//登陆过
+		ajax('/get_user_by_token?token='+encodeURIComponent(token), function (str){
+			var json=eval('('+str+')');
+			
+			if(!json.err)
+			{
+				document.getElementById('div1').style.display='none';
+				document.getElementById('div2').style.display='block';
+				
+				document.getElementById('user_name').innerHTML=json.user;
+			}
+		});
+	}
+};
+</script>
+</head>
+
+<body>
+<div id="div1">
+    用户：<input type="text" id="user" /><br>
+    密码：<input type="password" id="pass" /><br>
+    <input type="button" value="登录" id="btn1" />
+</div>
+<div id="div2">
+	欢迎，<span id="user_name"></span>
+</div>
+</body>
+</html>
