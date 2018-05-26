@@ -3,7 +3,7 @@ var fs=require('fs');
 var dataLib=require('data');
 var sessLib=require('session');
 
-http.createServer(function (req, res){	
+http.createServer(function (req, res){
 	dataLib.parseReq(req, function (data){
 		var get=data.get;
 		var post=data.post;
@@ -11,32 +11,9 @@ http.createServer(function (req, res){
 		var url=data.url;
 		
 		sessLib.read(cookie, function (session){
-			//session
-			if(!session['count'])
-			{
-				session['count']=1;
-			}
-			else
-			{
-				session['count']++;
-			}
-			
-			console.log(session['count']);
-			
-			//cookie发送给浏览器
-			var arr=[];
-			for(var i in cookie)
-			{
-				arr.push(i+'='+cookie[i]);
-			}
-			res.setHeader('set-cookie', arr);
-			
-			console.log(cookie['sessid']);
-			
-			//session写回去
+			dataLib.writeCookie(cookie, res);
 			sessLib.write(cookie, session);	//?
 			
-			//读文件
 			fs.readFile('./141123/www'+url, function (err, data){
 				if(err)
 					res.end('404');
@@ -44,8 +21,8 @@ http.createServer(function (req, res){
 					res.end(data);
 			});
 		});
-		
-		
-		
 	});
 }).listen(8080);
+
+//清除session
+sessLib.autoRemove(60, 20*60);
