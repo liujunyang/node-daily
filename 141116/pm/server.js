@@ -34,7 +34,7 @@ http.createServer(function (req, res){
 				res.end('{err: 1, msg: "用户名或密码有误"}');
 			}
 		} else {
-			fs.readFile('./4116/pm/www'+url, function (err, data){
+			fs.readFile('./141116/pm/www'+url, function (err, data){
 				if(err)
 				{
 					res.writeHead(404, {});
