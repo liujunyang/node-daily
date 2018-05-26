@@ -10,7 +10,7 @@ get>cookie>post
 
 -------------------------------------------------------------------------------
 
-db.query('SEEL...', function (err, data){
+db.query('SEL...', function (err, data){
 	if(err)
 		end();
 	else
