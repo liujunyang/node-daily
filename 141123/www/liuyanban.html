@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>模拟留言板</title>
+<style>
+#div1 {display:block;}
+#div2 {display:none;}
+#parent {display:none;}
+#box span {display:none;}
+</style>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script src="ajax.js"></script>
+<script>
+window.onload=function ()
+{
+	var oDiv1=document.getElementById('div1');
+	var oBox=document.getElementById('box');
+	var oUser=document.getElementById('user');
+	var oPass=document.getElementById('pass');
+	var oBtnLogin=document.getElementById('btn1');
+	var oBtnReg=document.getElementById('btn2');
+	var oParent=document.getElementById('parent');
+	
+	oBtnReg.onclick=function ()
+	{
+		ajax2('/user_reg?user='+oUser.value+'&pass='+oPass.value, function (json){
+			if(json.err)
+			{
+				alert('注册失败：'+json.msg);
+			}
+			else
+			{
+				alert('注册成功');
+			}
+		});
+	};
+	
+	oBtnLogin.onclick=function ()
+	{
+		ajax2('/user_login?user='+oUser.value+'&pass='+oPass.value, function (json){
+			if(json.err)
+			{
+				alert('登录失败：'+json.msg);
+			}
+			else
+			{
+				alert('登录成功');
+				oDiv1.style.display='none';
+				oParent.style.display='block';
+			}
+		});
+	};
+	
+	//检测是否登陆过
+	ajax2('/user_get_login', function (json){
+		if(!json.err)
+		{
+			oDiv1.style.display='none';
+			oParent.style.display='block';
+		}
+	});
+	
+	var oBtnPost=document.getElementById('btn_post');
+	var oTxt=document.getElementById('text');
+	
+	oBtnPost.onclick=function ()
+	{
+		ajax2('/msg_post?content='+oTxt.value, function (json){
+			if(json.err)
+				alert('出错');
+			else
+			{
+				var oP=document.createElement('p');
+				
+				oP.innerHTML=oTxt.value+'<span>确定要把<strong style="color: red">“'+oTxt.value+'”</strong>删除？</span><i>'+json.t+'</i>';
+				
+				oBox.appendChild(oP);
+			}
+		});	//?
+	};
+};
+</script>
+</head>
+
+<body>
+<div id="div1">
+    用户：<input type="text" id="user" /><br>
+    密码：<input type="password" id="pass" /><br>
+    <input type="button" value="登录" id="btn1" />
+    <input type="button" value="注册" id="btn2" />
+</div>
+<div id="parent">
+	<h4>留言内容：</h4>
+	<div id="box">
+    	<p>adasdf<span>确定要把<strong style="color: red">“1. dfasdf”</strong>删除？</span><i>2014-5-18 18:29</i></p>
+    </div>
+	<textarea id="text"></textarea><br />
+	<input id="btn_post" type="button" value="发表留言" />
+</div>
+</body>
+</html>

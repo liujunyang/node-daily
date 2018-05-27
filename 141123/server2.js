@@ -9,6 +9,14 @@ var common=require('common');
 var ev=new Event();
 
 http.createServer(function (req, res){
+	function fnDbError(err)
+	{
+		console.log('数据库出错', err);
+		
+		res.end('{"err": 1, "msg": "数据库出错"}');
+	}
+	db.ev.once('error', fnDbError);
+	
 	dataLib.parseReq(req, function (data){
 		var get=data.get;
 		var post=data.post;
@@ -30,14 +38,18 @@ http.createServer(function (req, res){
 						res.end(data);
 				});
 			}
+			
+			db.ev.removeListener('error', fnDbError);
+			//db.ev.emit('error');
 		});
 	});
 }).listen(8080);
 
 ev.on('/user_reg', function (data, res){
+	var get=data.get;
 	var ev=new Event();
 	
-	db.query("SELECT COUNT(*) AS c FROM user_table WHERE username='"+data.get.user+"'", function (data){
+	db.query("SELECT COUNT(*) AS c FROM user_table WHERE username='{name}'", {name: get.user}, function (data){
 		if(data[0].c>0)
 			res.end('{"err": 1, "msg": "此用户名已存在"}');
 		else
@@ -45,7 +57,9 @@ ev.on('/user_reg', function (data, res){
 	});
 	
 	ev.once('ok', function (){
-		db.query("INSERT INTO user_table (username, password) VALUES('"++"', '"++"')");
+		db.query("INSERT INTO user (username, password) VALUES('{name}', '{pass}')", {name: get.user, pass: common.md5(get.pass)}, function (data){
+			res.end('{"err": 0}');
+		});
 	});
 	
 	/*db.query("SELECT ID FROM user WHERE username='"+data.get.user+"'", function (data){
