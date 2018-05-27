@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="   -   .com" />
+<meta name="copyright" content="   -   .com" />
+<title>模拟events</title>
+<script>
+function Event()
+{
+	this.json={};	//{abc: [fn, fn, fn], data: [], end: [...]}
+}
+
+Event.prototype.addListener=
+Event.prototype.on=function (name, fn)
+{
+	if(!this.json[name])
+	{
+		this.json[name]=[];
+	}
+	
+	this.json[name].push(fn);
+};
+Event.prototype.emit=function (name)
+{
+	var arr=[];
+	arr=arr.concat.apply(arr, arguments);
+	
+	arr.shift();
+	
+	if(this.json[name])
+	{
+		var fns=this.json[name];
+		for(var i=0;i<fns.length;i++)
+		{
+			fns[i].apply(null, arr);
+		}
+	}
+};
+
+//-----------------
+
+var ev=new Event();
+
+ev.on('abc', function (a, b){
+	alert(a+b);
+});
+
+ev.emit('abc', 12, 5);
+</script>
+</head>
+
+<body>
+
+</body>
+</html>
