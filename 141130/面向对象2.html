@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>面向对象2</title>
+<script>
+//1.json			【简单、一个】
+/*
+var p={
+	name:	'blue',
+	age:	18,
+	showName:	function ()
+	{
+		alert(this.name);
+	},
+	showAge:	function ()
+	{
+		alert(this.age);
+	}
+};
+
+p.showName();
+p.showAge();
+*/
+
+//2.构造函数+原型		【复杂、多个】
+function Person(name, age)
+{
+	this.name=name;
+	this.age=age;
+}
+
+Person.prototype.showName=function ()
+{
+	alert(this.name);
+};
+Person.prototype.showAge=function ()
+{
+	alert(this.age);
+};
+
+var p1=new Person('blue', 18);
+var p2=new Person('张三', 25);
+
+p1.a=12;
+
+alert(p2.a);
+</script>
+</head>
+
+<body>
+
+</body>
+</html>
