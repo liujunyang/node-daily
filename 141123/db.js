@@ -1,11 +1,11 @@
 var mysql=require('mysql');
 var Event=require('events').EventEmitter;
 
-var user='blue2312';
+var user='henry';
 var pass='123456';
 
 //-----------不用events-----------
-var db=mysql.createConnection({host: 'localhost', user: 'root', password: '', database: '20141116'});
+var db=mysql.createConnection({host: 'localhost', user: 'root', password: '123456', database: '141123'});
 
 db.query("SELECT * FROM user_table WHERE username='"+user+"'", function (err, data){
 	if(err)
