@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ajax2</title>
+<script>
+window.onload=function ()
+{
+	var oBtn=document.getElementById('btn1');
+	
+	oBtn.onclick=function ()
+	{
+		var oAjax=new XMLHttpRequest();
+		
+		//open(方法, url, true)
+		oAjax.open('post', 'a.txt?a=12&b=5', true);
+		
+		//send()
+		oAjax.send('user=henry&pass=123456');
+		
+		//onreadystatechange——通信阶段
+		oAjax.onreadystatechange=function ()
+		{
+			if(oAjax.readyState==4)
+			{
+				if(oAjax.status>=200 && oAjax.status<300 || oAjax.status==304)
+				{
+					alert(oAjax.getResponseHeader('xxx'));
+					alert('成功：'+oAjax.responseText);
+				}
+				else
+				{
+					alert('失败');
+				}
+			}
+		};
+	};
+};
+</script>
+</head>
+
+<body>
+<input type="button" value="aaa" id="btn1" />
+</body>
+</html>

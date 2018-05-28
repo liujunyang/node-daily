@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ajax</title>
+<script>
+var oAjax=new XMLHttpRequest();
+
+//open(方法, url, true)
+oAjax.open('get', 'a.txt', true);
+
+//send()
+oAjax.setRequestHeader('aaa', [12,5,8]);
+//oAjax.setRequestHeader({aaa: 12, bbb: 5});
+//oAjax.setRequestHeader(['aaa=12', 'bbb=6']);
+
+oAjax.send();
+
+//onreadystatechange——通信阶段
+oAjax.onreadystatechange=function ()
+{
+	if(oAjax.readyState==4)
+	{
+		if(oAjax.status>=200 && oAjax.status<300 || oAjax.status==304)
+		{
+			alert(oAjax.getResponseHeader('xxx'));
+			alert('成功：'+oAjax.responseText);
+		}
+		else
+		{
+			alert('失败');
+		}
+	}
+};
+</script>
+</head>
+
+<body>
+
+</body>
+</html>
