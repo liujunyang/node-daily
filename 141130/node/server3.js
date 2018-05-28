@@ -1,6 +1,5 @@
 var http=require('http');
 var fs=require('fs');
-var Buffer=require('buffer').Buffer;
 var urlLib=require('url');
 var querystring=require('querystring');
 
@@ -33,7 +32,7 @@ http.createServer(function (req, res){
 		console.log(str);
 		
 		//文件
-		fs.readFile('www'+url, function (err, data){
+		fs.readFile('./141130/node/www'+url, function (err, data){
 			if(err)
 			{
 				res.writeHeader(404, {});
