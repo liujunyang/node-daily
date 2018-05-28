@@ -1,4 +1,4 @@
-var Buffer=require('buffer').Buffer;
+// var Buffer=require('buffer').Buffer;
 
 //1.创建
 //Buffer(大小)

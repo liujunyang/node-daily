@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>找数字</title>
+<script>
+var arr=[12,7,5,3,8,5,5,6,7,4,8];
+
+//arr=>8,5,5
+var arr2=[8,5,5];
+
+for(var i=0;i<arr.length-(arr2.length-1);i++)
+{
+	var found=true;
+	
+	for(var j=0;j<arr2.length;j++)
+	{
+		console.log(i+j);
+		if(arr[i+j]!=arr2[j])
+		{
+			found=false;
+			break;
+		}
+	}
+	
+	if(found)
+	{
+		alert('找到了'+i);
+	}
+}
+</script>
+</head>
+
+<body>
+
+</body>
+</html>
