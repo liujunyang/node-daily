@@ -1,0 +1,109 @@
+{
+  "errcode": 0,
+  "errmsg": "",
+  "data": {
+    "id": 175,
+    "count": 5, //ppt总页数
+    "title": "通天塔",
+    "tags": {
+      "doubt": [ //不懂列表，每一项为lessonSlideID
+        774,
+        775
+      ],
+      "collection": [ //收藏列表，每一项为lessonSlideID
+        776,
+        777
+      ]
+    },
+    "cover": "http://7xo8b6.com2.z0.glb.qiniucdn.com/FgIZyXAwVNbHDdEEHFq3MGXzJorT",
+    "show_slides_count": 0, //允许发送的ppt页数
+    "thumbnail": "http://7xo8b6.com2.z0.glb.qiniucdn.com/FvaYh9UpsBNgZ-wekylmC2zdVYOK",
+    "slides": [ //每页ppt详细信息
+      {
+        "lessonSlideID": 774,
+        "Cover": "http://7xo8b6.com2.z0.glb.qiniucdn.com/FgIZyXAwVNbHDdEEHFq3MGXzJorT",
+        "Thumbnail": "http://7xo8b6.com2.z0.glb.qiniucdn.com/FvaYh9UpsBNgZ-wekylmC2zdVYOK"
+      },
+      {
+        "lessonSlideID": 775,
+        "Cover": "http://7xo8b6.com2.z0.glb.qiniucdn.com/FkXh7a2UwtUzuc3eVRm8kvV7SfJu",
+        "Thumbnail": "http://7xo8b6.com2.z0.glb.qiniucdn.com/Fqtnm1OoKdWCEcdHqc9EIJTWpexA"
+      },
+      {
+        "lessonSlideID": 776,
+        "Cover": "http://7xo8b6.com2.z0.glb.qiniucdn.com/FvbeY1eEk0-rh8YrlFhWFImhQbSb",
+        "Thumbnail": "http://7xo8b6.com2.z0.glb.qiniucdn.com/FlXCwuBGuY3OtVIXMcFyZbqZQq-Z"
+      },
+      {
+        "lessonSlideID": 777,
+        "Problem": { //有习题才有此字段
+          "ProblemID": 92,
+          "Remark": "这是解析", //有解析才有此字段
+        },
+        "Cover": "http://7xo8b6.com2.z0.glb.qiniucdn.com/FsxMOWBbofwVPZGXqYoQ-e9I5kg4",
+        "Thumbnail": "http://7xo8b6.com2.z0.glb.qiniucdn.com/FhL5yJXp4vJ1AccSbtVWhKkK71Kh"
+      },
+      {
+        "lessonSlideID": 778,
+        "Cover": "http://7xo8b6.com2.z0.glb.qiniucdn.com/FpQ8D4oKnHERJ9BGbMxiMfutaXsx",
+        "Thumbnail": "http://7xo8b6.com2.z0.glb.qiniucdn.com/Fg2D1e3mZteC6v6G7Igif0uTckus"
+      }
+    ],
+    "doubtSlides": [ //不懂的ppt详细信息
+      {
+        "lessonSlideID": 774,
+        "isDoubt": true,
+        "isCollection": true,
+        "Cover": "http://7xo8b6.com2.z0.glb.qiniucdn.com/FgIZyXAwVNbHDdEEHFq3MGXzJorT",
+        "Thumbnail": "http://7xo8b6.com2.z0.glb.qiniucdn.com/FvaYh9UpsBNgZ-wekylmC2zdVYOK"
+      },
+      {
+        "lessonSlideID": 775,
+        "isDoubt": true,
+        "isCollection": true,
+        "Cover": "http://7xo8b6.com2.z0.glb.qiniucdn.com/FkXh7a2UwtUzuc3eVRm8kvV7SfJu",
+        "Thumbnail": "http://7xo8b6.com2.z0.glb.qiniucdn.com/Fqtnm1OoKdWCEcdHqc9EIJTWpexA"
+      }
+    ],
+    "collectionSlides": [ //收藏的ppt详细信息
+      {
+        "lessonSlideID": 774,
+        "isDoubt": true,
+        "isCollection": true,
+        "Cover": "http://7xo8b6.com2.z0.glb.qiniucdn.com/FgIZyXAwVNbHDdEEHFq3MGXzJorT",
+        "Thumbnail": "http://7xo8b6.com2.z0.glb.qiniucdn.com/FvaYh9UpsBNgZ-wekylmC2zdVYOK"
+      },
+      {
+        "lessonSlideID": 775,
+        "isDoubt": true,
+        "isCollection": true,
+        "Cover": "http://7xo8b6.com2.z0.glb.qiniucdn.com/FkXh7a2UwtUzuc3eVRm8kvV7SfJu",
+        "Thumbnail": "http://7xo8b6.com2.z0.glb.qiniucdn.com/Fqtnm1OoKdWCEcdHqc9EIJTWpexA"
+      }
+    ],
+    "problemSlides": [ //习题的ppt详细信息
+      {
+        "lessonSlideID": 774,
+        "isDoubt": true,
+        "isCollection": true,
+        "Cover": "http://7xo8b6.com2.z0.glb.qiniucdn.com/FgIZyXAwVNbHDdEEHFq3MGXzJorT",
+        "Thumbnail": "http://7xo8b6.com2.z0.glb.qiniucdn.com/FvaYh9UpsBNgZ-wekylmC2zdVYOK",
+        "Problem": { //有习题才有此字段
+          "ProblemID": 92,
+          "Remark": "这是解析",      //有解析才有此字段
+        },
+      },
+      {
+        "lessonSlideID": 775,
+        "isDoubt": true,
+        "isCollection": true,
+        "Cover": "http://7xo8b6.com2.z0.glb.qiniucdn.com/FkXh7a2UwtUzuc3eVRm8kvV7SfJu",
+        "Thumbnail": "http://7xo8b6.com2.z0.glb.qiniucdn.com/Fqtnm1OoKdWCEcdHqc9EIJTWpexA",
+        "Problem": { //有习题才有此字段
+          "ProblemID": 93,
+          "Remark": "这是解析",      //有解析才有此字段
+        },
+      }
+    ]
+  }
+}

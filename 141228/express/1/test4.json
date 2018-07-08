@@ -1,0 +1,55 @@
+{
+  "errcode": 0,
+  "errmsg": "",
+  "data": {
+    "score": 6,                   // 本人所有题的得分(包括主观题)+试卷的得分
+    "xiti_score": 6,              // 本人所有题的得分(包括主观题)
+    "full_score": 20,             // 满分：客观题得分(包括主观题)+试卷总分
+    "xiti_full_score": 20,        // 满分：客观题得分(包括主观题)
+    "participants": 30,           // 签到人数
+    "objective_count": 10,        // 客观题总数(课件客观题数+试卷客观题数)，客观题不包含投票题
+    "xiti_objective_count": 10,   // 客观题总数(课件客观题数)，客观题不包含投票题
+    "correct_objective_count": 5, // 正确的客观题数（包括试卷）
+    "xiti_correct_objective_count": 5, // 正确的客观题数(不包括试卷)
+    "duration": 100,              // 单位秒，总用时(客观题+主观题+试卷)
+    "xiti_duration": 100,         // 单位秒，总用时(客观题+主观题)
+    "all_score_problem": 150,     // 所有人习题的得分(不包括试卷)
+    "all_score_quiz": 150,        // 所有人试卷的得分
+    "problem_detail": [
+      {
+        "id": 842,                // 习题的id
+        "lessonslide_id": 3896,   // slide id
+        "presentation_id": 1212,  // 课件的id
+        "Cover": "http://7xo8b6.com2.z0.glb.qiniucdn.com/FtqM9jdrxwWboxexpKqoMBxP8CMX",
+        "Thumbnail": "http://7xo8b6.com2.z0.glb.qiniucdn.com/FlTLKdVpbpeMFrL1FtDzWVwpAq7G",
+        "full_score": 1,          // 该题满分
+        "answer": "C",            // 正确答案
+        "problem_type": 1,        // 类型
+        "score": 1,               // 个人该题得分【未作答的话为 undefined】
+        "correct": true,          // 该题是否正确
+        "result": "C",            // 个人答案
+        "subj_result": {
+            "content": "啊啊啊啊啊啊",
+            "pics": [
+                {
+                    "pic": "",
+                    "thumb": ""
+                }
+            ]
+        },
+        "is_subject_finish": false// 主观题是否已批改
+      }
+    ],
+    "quiz_detail": [
+      {
+        "quiz_id": 113731, 
+        "title": "课堂考试1",          // 试卷title
+        "full_score": 100,            // 试卷总分
+        "problem_count": 10,          // 试卷题目数量（包含主观题）
+        "score": 89,                  // 个人得分【未作答的话为 undefined】交空卷分数为0
+        "has_subjective": true,       // 是否有主观题
+        "is_subj_score_finish": false // 主观题是否批改完
+      }
+    ]
+  }
+}
