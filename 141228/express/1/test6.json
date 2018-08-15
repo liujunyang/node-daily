@@ -1,0 +1,249 @@
+{
+  "data": {
+    "Masters": [
+      {
+        "Shapes": [],
+        "Layouts": [
+          {
+            "Shapes": []
+          },
+          {
+            "Shapes": []
+          }
+        ]
+      }
+    ],
+    "Language": "zh-CN",
+    "Title": "两种投票题",
+    "Height": 720,
+    "Slides": [
+      {
+        "PageIndex": 1,
+        "MasterIndex": 1,
+        "Cover": "http://st0.ykt.io/FgzFv1mzxuYCOl05ZhmYvw20DWOU",
+        "Shapes": [
+          {
+            "URL": "http://st0.ykt.io/FpRHdT-g8ODZlRvIkvf8g-FAoxKc",
+            "Top": 117.833389,
+            "Height": 250.666687,
+            "Width": 337.5,
+            "ZOrderPosition": 1,
+            "Rotation": 0,
+            "Left": 56.25
+          },
+          {
+            "URL": "http://st0.ykt.io/Frf6o9s-qAYLlHTBfOIKUiQ_iTpP",
+            "Top": 378.166779,
+            "Height": 173.833313,
+            "Width": 337.5,
+            "ZOrderPosition": 2,
+            "Rotation": 0,
+            "Left": 56.25
+          }
+        ],
+        "LayoutIndex": 1,
+        "Background": {
+          "Data": "White",
+          "Type": "FillSolid",
+          "Transparency": 0
+        },
+        "CardID": 29106,
+        "card_tag": {
+          "doubt": true,
+          "card_id": 29244,
+        },
+        "discussion": {
+          "comment_num": 5,
+          "topic_id": "xxx"
+        }
+      },
+      {
+        "PageIndex": 2,
+        "MasterIndex": 1,
+        "Cover": "http://st0.ykt.io/FhfYbEPL58U6fnoOhf7EJ0y05LZz",
+        "Shapes": [
+          {
+            "URL": "http://st0.ykt.io/FvDfGqNBXDCj8V0kLH7wuBsZmWnV",
+            "Top": 45,
+            "Height": 225,
+            "Width": 360,
+            "ZOrderPosition": 1,
+            "Rotation": 0,
+            "Left": 45
+          },
+          {
+            "URL": "http://st0.ykt.io/FldsbMnwU8y13WyN2A6-zBAwUena",
+            "Top": 292.5,
+            "Height": 67.5,
+            "Width": 315,
+            "ZOrderPosition": 2,
+            "Rotation": 0,
+            "Left": 90
+          },
+          {
+            "URL": "http://st0.ykt.io/FldsbMnwU8y13WyN2A6-zBAwUena",
+            "Top": 382.5,
+            "Height": 67.5,
+            "Width": 315,
+            "ZOrderPosition": 3,
+            "Rotation": 0,
+            "Left": 90
+          },
+          {
+            "URL": "http://st0.ykt.io/FldsbMnwU8y13WyN2A6-zBAwUena",
+            "Top": 472.5,
+            "Height": 67.5,
+            "Width": 315,
+            "ZOrderPosition": 4,
+            "Rotation": 0,
+            "Left": 90
+          },
+          {
+            "URL": "http://st0.ykt.io/FldsbMnwU8y13WyN2A6-zBAwUena",
+            "Top": 562.5,
+            "Height": 67.5,
+            "Width": 315,
+            "ZOrderPosition": 5,
+            "Rotation": 0,
+            "Left": 90
+          }
+        ],
+        "LayoutIndex": 2,
+        "Background": {
+          "Data": "White",
+          "Type": "FillSolid",
+          "Transparency": 0
+        },
+        "CardID": 29107,
+        "card_tag": {
+          "doubt": true,
+          "card_id": 29244,
+        },
+        "discussion": {
+          "comment_num": 5,
+          "topic_id": "xxx"
+        },
+        "Problem": {
+          "Submit": {
+            "Width": 129.6,
+            "Top": 652.5,
+            "Left": 232.2,
+            "Height": 34.56
+          },
+          "Score": 1,
+          "Bullets": [
+            {
+              "Width": 43.2,
+              "Top": 304.65,
+              "Label": "A",
+              "Left": 42.48,
+              "Height": 43.2
+            },
+            {
+              "Width": 43.2,
+              "Top": 394.65,
+              "Label": "B",
+              "Left": 42.48,
+              "Height": 43.2
+            },
+            {
+              "Width": 43.2,
+              "Top": 484.65,
+              "Label": "C",
+              "Left": 42.48,
+              "Height": 43.2
+            },
+            {
+              "Width": 43.2,
+              "Top": 574.65,
+              "Label": "D",
+              "Left": 42.48,
+              "Height": 43.2
+            }
+          ],
+          "HasRemark": false,
+          "ProblemID": 7842,
+          "Answer": "1",
+          "Type": "Polling",
+          "TypeText": "投票"
+        },
+        "problem_result": { //这是单选和多选的返回字段
+          "problem_id": 7350,
+          "problem_type": 1,
+          "cover": "http://st0.ykt.io/FmXMCOqGme7noplrB1_57E3xKy0V",
+          "finish_count": 5, //完成人数
+          "correct_rate": 0.4, //正确率
+          "answer": "A",
+          "distribution": { //答案分布
+            "A": [
+              337,
+              6492
+            ], //每个选项的user_id
+            "B": [
+              6425,
+              352,
+              22
+            ]
+          }
+        },
+      },
+    ],
+    "problem_results": [ //课件题目信息
+      {
+        "problem_id": 7350,
+        "problem_type": 1,
+        "cover": "http://st0.ykt.io/FmXMCOqGme7noplrB1_57E3xKy0V",
+        "finish_count": 5, //完成人数
+        "correct_rate": 0.4, //正确率
+        "answer": "A",
+        "distribution": { //答案分布
+          "A": [
+            337,
+            6492
+          ], //每个选项的user_id
+          "B": [
+            6425,
+            352,
+            22
+          ]
+        },
+        "slide": {
+          "PageIndex": 1,
+          "MasterIndex": 1,
+          "Cover": "http://st0.ykt.io/FgzFv1mzxuYCOl05ZhmYvw20DWOU",
+          "Shapes": [
+            {
+              "URL": "http://st0.ykt.io/FpRHdT-g8ODZlRvIkvf8g-FAoxKc",
+              "Top": 117.833389,
+              "Height": 250.666687,
+              "Width": 337.5,
+              "ZOrderPosition": 1,
+              "Rotation": 0,
+              "Left": 56.25
+            },
+            {
+              "URL": "http://st0.ykt.io/Frf6o9s-qAYLlHTBfOIKUiQ_iTpP",
+              "Top": 378.166779,
+              "Height": 173.833313,
+              "Width": 337.5,
+              "ZOrderPosition": 2,
+              "Rotation": 0,
+              "Left": 56.25
+            }
+          ],
+          "LayoutIndex": 1,
+          "Background": {
+            "Data": "White",
+            "Type": "FillSolid",
+            "Transparency": 0
+          },
+          "CardID": 29106
+        }
+      },
+    ],
+    "Width": 450,
+    "Version": "1.2"
+  },
+  "errcode": 0,
+  "errmsg": ""
+}
